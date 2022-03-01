@@ -13,13 +13,21 @@
     --text: #222;
     --hover: #1d1e30;
     --footerbg: #1d1e30;
+    --lightgray:#999;
     --btnBg: #f2d123;
+    --btnHover:#9e8509;
     
 
 }
 body{
     font-family: "Nunito", sans-serif;
 }
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+}
+/* header styles */
+
 #header{
    background: url('/assets/img/bg.jpg') no-repeat;
    background-size:cover;
@@ -45,4 +53,78 @@ color: #fff;
     align-items:center;
     justify-content: center;
     right: 0;
+}
+/* main styles */
+#main{
+    padding-top: 1.2rem;
+    
+}
+#description{
+    font-size: 1.4rem;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#survey-form{
+    padding: 0 1rem;
+}
+#survey-form div{
+    margin-bottom: 1rem;
+}
+.form-text{
+    color: var(--lightgray);
+}
+.form-label{
+    display:block;
+    padding-bottom: 0.4rem;
+}
+.form-control{
+    padding: 0.5rem 0.2rem;
+    width: 100%;
+}
+#gender label:last-of-type{
+    margin-left: 0.5rem;
+}
+fieldset{
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+fieldset legend{
+    padding: 0 0.5rem;
+}
+#languages input~label{
+    margin-left: 0.5rem;
+}
+#survey-form button{
+    padding: 0.5rem 2rem;
+    background-color: var(--btnBg);
+    color: #fff;
+    border:none;
+    margin: 0.5rem auto;
+    display:block;
+}
+#survey-form button:hover{
+    background-color: var(--btnHover);
+}
+#survey-form textarea{
+    resize:none;
+}
+#footer{
+    margin-top: 4rem;
+    padding: 2rem;
+    color: #fff;
+    background: var(--footerbg);
+    line-height: 1.5rem;
+}
+#footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+#footer a{
+    text-decoration: none;
+    border-bottom: 2px dotted var(--lightgray);
+    color: var(--lightgray);
+}
+#footer a:hover{
+    color: #fff;
 }

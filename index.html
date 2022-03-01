@@ -13,90 +13,83 @@
     <header id='header'>
         
         <div class="about">
-            <h1>Dev Profile Survey</h1>
+            <h1 id='title'>Dev Profile Survey</h1>
         </div>
     </header>
     
     
     <main id="main">
-        <div class="container-fluid">
+        <div class="container">
             
-            <div class='row' id='info'>
-                <div class='col-8 offset-2'>
-                    <h1 id='title'>Green initiative</h1>
-                    <p class="lead" id='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate temporibus, dicta amet earum nesciunt autem sunt beatae ratione. </p>
-                </div>
+        <p id ='description'>Tell us a bit more about yourself</p>
+
+        <form action="#" id="survey-form">
+            <div>
+                <label for="name" class='form-label' id='name-label'>Name</label>
+                <input type="text" id='name' class='form-control' required placeholder="name">
             </div>
-            <div class='row'>
-                <div class='col-6 offset-2'>
-                    <form action="#" id="survey-form">
-                        <div class='mb-3'>
-                            <label for="name" id='name-label' class='form-label'>Name</label>
-                            <input type="text" id='name' class='form-control' required placeholder="name">
-                        </div>
-                        <div class='mb-3'>
-                            <label for="email" class='form-label' id='email-label'>Email</label>
-                            <input type="email" id='email' class='form-control' required placeholder="name@email.com">
-                        </div>
-                        <div class='mb-3'>
-                            <label for="number" id ='number-label' class='form-label '>Number</label>
-                            <input type="number" min='1' max='5' id='number' class='form-control' required>
-                        </div>
-                        <div class='mb-3'>
-                            <label for="dropdown" class='form-label'>Dropdown</label>
-                            <select name="" id="dropdown">
-                                <option value="10">10</option>
-                                <option value="20" selected>20</option>
-                                <option value="30">30</option>
-                                <option value="40">40</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <fieldset>
-                                <legend>Radio selection</legend>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Default radio
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Default checked radio
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class='mb-3'>
-                        <fieldset>
-                            <legend>Select a poison</legend>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" value="">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked value="">
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Checked checkbox
-                                </label>
-                            </div>
-                        </fieldset>
-                        
-                        </div>
-                        <textarea name="comments" class='form-control mb-3' id="" cols="30" rows="10"></textarea>
-                        <button class="btn btn-success" type='submit' id='submit'>submit</button>
-                    </form>
-                </div>
+            <div>
+                <label for="email" class='form-label' id='email-label'>Email</label>
+                <input type="email" id='email' class='form-control' required placeholder="name@email.com">
             </div>
+            <div>
+                <label for="number" class='form-label' id='number-label'>Years of experience</label>
+                <input type="number" min='1' max='10' id='number' class='form-control' placeholder='#' required>
+                <p class="form-text">Between 1 and 10</p>
             </div>
+            <div>
+                <label for="dropdown" class='form-label'>Role</label>
+                <select name="" id="dropdown" class='form-control'>
+                    <option value="Front-End">Front-End</option>
+                    <option value="Back-End" selected>Back-End</option>
+                    <option value="DevOps">DevOps</option>
+                    <option value="FullStack">FullStack</option>
+                </select>
+            </div>
+                <fieldset id='gender' > 
+                    <legend>Gender</legend>
+                    <label for="male">Male</label>
+                    <input type="radio" name='gender' value='male' checked id='male'> 
+                    <label for="female">Female</label>
+                    <input type="radio" name='gender' value='female' checked id='female'> 
+                </fieldset>  
+                            
+                    <fieldset id='languages'>
+                        <legend>Languages</legend>
+                    <label for="javascript">Javascript</label>
+                    <input type="checkbox" name="language" id="javascript" value='javascript'>
+                    <label for="python">Python</label>
+                    <input type="checkbox" name="language" id="python" value='python'>
+                    <label for="ruby">Ruby</label>
+                    <input type="checkbox" name="language" id="ruby" value='ruby'>
+                    <label for="php">PHP</label>
+                    <input type="checkbox" name="language" id="php" value='php'>
+                    </fieldset>
+
+                <textarea rows='10' placeholder='Additional comments' name="comments" id="comments" class='form-control'></textarea>
+                <button type='submit'>Submit</button>
+        </form>
+            </div>
+               
         </main>
-        <footer id="footer" class='pt-2 pb-1 bg-warning'>
-        <div class="container text-center">
-            <p>This is a  <a href="#">FreeCodeCamp</a> challenge project.</p>
-            <p>Developed by <a href="#">Joel Kaigarula</a></p>
+        <footer id="footer">
+        <div class="container">
+            <div id="about">
+                <h2>About</h2>
+                <p>This is a  <a href="https://wwww.freecodecamp.org">FreeCodeCamp</a> challenge project.</p>
+                Developed by <a href="https://github.com/jkrula">Joel Kaigarula</a>
+            </div>
+            <div id="stack">
+                <h2>Tech Stack</h2>
+                <ul>
+                    <li>Html5</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+            <div id="credits">
+                <h2>Credits</h2>
+                <p>Image from <a href='https://www.unsplash.com'>unsplash</a></p>
+            </div>
         </div>
                 </footer>
 
