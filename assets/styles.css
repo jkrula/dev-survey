@@ -27,7 +27,7 @@ body{
 /* header styles */
 
 #header{
-   background: url('/assets/img/bg.jpg') no-repeat;
+   background: url('/dev-survey/assets/img/bg.jpg') no-repeat;
    background-size:cover;
    background-position: top left;
    height: 15rem;
