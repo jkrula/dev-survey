@@ -3,15 +3,13 @@
    margin:0;
    padding:0;
    box-sizing:border-box;
+   font-family: inherit;
    font-size:inherit;
 
 }
 /* colors */
 :root{
-    --main:#1d1e30;
-    --title: #222;
-    --text: #222;
-    --hover: #1d1e30;
+    --main:#1d1e30;    
     --footerbg: #1d1e30;
     --lightgray:#999;
     --btnBg: #f2d123;
@@ -35,6 +33,7 @@ body{
    height: 15rem;
    text-align: center;
    position: relative;
+   border-bottom: 0.4rem solid var(--btnBg);
 }
 
 #header h1{
@@ -64,6 +63,7 @@ color: #fff;
     color: var(--main);
     text-align: center;
     margin-bottom: 2rem;
+    
 }
 #survey-form{
     padding: 0 1rem;
@@ -77,10 +77,17 @@ color: #fff;
 .form-label{
     display:block;
     padding-bottom: 0.4rem;
+    font-weight: bold;
 }
 .form-control{
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem 0.4rem;
     width: 100%;
+}
+#gender label{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -1px;
+    
 }
 #gender label:last-of-type{
     margin-left: 0.5rem;
@@ -91,6 +98,7 @@ fieldset{
 }
 fieldset legend{
     padding: 0 0.5rem;
+    font-weight:bold;
 }
 #languages input~label{
     margin-left: 0.5rem;
@@ -120,6 +128,12 @@ fieldset legend{
     display: flex;
     justify-content: space-between;
 }
+#footer .container div{
+    padding: 0.4rem;
+}
+#footer #stack ul{
+    list-style-type: none;
+}
 #footer a{
     text-decoration: none;
     border-bottom: 2px dotted var(--lightgray);
@@ -127,4 +141,28 @@ fieldset legend{
 }
 #footer a:hover{
     color: #fff;
+}
+
+@media screen and (max-width: 728px){
+    #header{
+        height: 10rem;
+    }
+    #header h1{
+        font-size: 2rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 468px){
+    #header{
+        height: 6rem;
+        background: var(--main);
+    }
+    #footer .container{
+        display: block;
+    }
+    #footer .container div{
+        margin-top: 1rem;
+    }
 }
